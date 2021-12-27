@@ -1,38 +1,90 @@
-.App {
-  text-align: center;
+h1,
+p {
+  font-family: Lato;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar {
+  background-color: #4922a4;
+  padding: 15px;
+  color: white;
+  width: 90%;
+  margin: auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.btn.btn-primary {
+  background-color: #4922a4;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar-brand {
+  color: white;
+  font-weight: bold;
+  font-size: 21px;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.navbar-brand:hover {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.material-icons {
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.title {
+  margin-left: 10px;
+}
+
+.home__component,
+.statement__container,
+.deposite__container,
+.withdraw__container {
+  width: 90%;
+  margin: auto;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+}
+
+.btn2.btn-light {
+  text-transform: uppercase;
+  font-size: 14px;
+  color: red;
+  outline: none;
+  box-shadow: none;
+  border: none;
+}
+
+.table__wrapper {
+  margin-top: 40px;
+}
+
+.button__wrapper {
+  margin-top: 20px;
+}
+
+.btn1.btn-light {
+  border: none;
+  outline: none;
+  box-shadow: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: blue;
+}
+
+.btn1.btn-light:hover,
+.btn2.btn-light:hover {
+  box-shadow: none;
+}
+
+.deposite__form,
+.withdraw__form {
+  margin-top: 30px;
+}
+
+input {
+  outline: none !important;
+  box-shadow: none !important;
+  border: none !important;
+  border-bottom: 1px solid black !important;
+  width: 50% !important;
 }
