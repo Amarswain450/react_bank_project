@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { withDrawAction } from './redux/actions/bankActions';
 import { useNavigate } from 'react-router-dom';
-import { useSelector } from 'react-redux';
 
 const Withdraw = () => {
   let navigate = useNavigate();

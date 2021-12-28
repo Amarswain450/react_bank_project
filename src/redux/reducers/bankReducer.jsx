@@ -10,6 +10,8 @@ const initialState = {
     },
   ],
   amountData: 5000,
+  depositeVal: '',
+  withdrawVal: '',
 };
 
 const bankReducer = (state = initialState, action) => {
@@ -26,6 +28,8 @@ const bankReducer = (state = initialState, action) => {
           type: 'credit',
           amount: action.payload,
         }),
+        depositeVal: action.payload,
+        withdrawVal: '',
       };
 
     case WITHDRAW:
@@ -41,6 +45,8 @@ const bankReducer = (state = initialState, action) => {
           type: 'debit',
           amount: action.payload,
         }),
+        withdrawVal: action.payload,
+        depositeVal: '',
       };
     default:
       return state;

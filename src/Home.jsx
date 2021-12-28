@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+toast.configure();
 
 const Home = () => {
-  const { amountData } = useSelector((state) => state);
+  const { amountData, depositeVal, withdrawVal } = useSelector(
+    (state) => state
+  );
   const navigate = useNavigate();
   const statementNavigation = () => {
     navigate('/statement');
@@ -14,6 +19,25 @@ const Home = () => {
   const withdrawNavigation = () => {
     navigate('/withdraw');
   };
+  useEffect(() => {
+    if (depositeVal) {
+      toast.dark(`${depositeVal} deposited successfully`, {
+        position: 'bottom-left',
+        autoClose: 2000,
+        hideProgressBar: true,
+      });
+    }
+  }, [depositeVal]);
+
+  useEffect(() => {
+    if (withdrawVal) {
+      toast.dark(`${withdrawVal} Withdrawl successfully`, {
+        position: 'bottom-left',
+        autoClose: 2000,
+        hideProgressBar: true,
+      });
+    }
+  }, [withdrawVal]);
 
   return (
     <>
@@ -44,6 +68,7 @@ const Home = () => {
           </button>
         </div>
       </div>
+      <ToastContainer />
     </>
   );
 };
